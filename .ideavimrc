@@ -56,6 +56,7 @@ nmap <Leader>s <Action>(FileStructurePopup)
 nmap <Leader>ff <Action>(SearchEverywhere)
 nmap <Leader>wg <Action>(ActivateVersionControlToolWindow)
 nmap <Leader>wc <Action>(ActivateCommitToolWindow)
+nmap <Leader>t  <Action>(ActivateTerminalToolWindow)
 nmap <Leader>al :actionlist<space>
 
 " Code navigation keymaps
@@ -73,6 +74,14 @@ nmap <Leader>cg <Action>(Generate)
 vmap <Leader>cv <Action>(IntroduceVariable)
 vmap <Leader>cm <Action>(ExtractMethod)
 nmap <Leader>cs <Action>(ChangeSignature)
+
+" Run commands
+nmap <Leader>rc <Action>(RunClass)
+nmap <Leader>rl <Action>(Run)
+nmap <Leader>rd <Action>(Debug)
+nmap <Leader>rs <Action>(RunDebug)
+
+
 
 " Git
 nmap <leader>gg <action>(Git.Menu)

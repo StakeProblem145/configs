@@ -1,0 +1,93 @@
+""" Map leader to space ---------------------
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+""" Plugins
+set NERDTree
+set highlightedyank
+set commentary
+
+""" Settings
+set relativenumber
+set number
+set showmode
+set wrap
+
+" Which key settings
+set which-key
+set notimeout
+" Clipboard
+set clipboard+=unnamed
+set showmode
+
+" Recommanded ideavim settings
+set ideajoin
+set ideaput
+set ideamarks
+
+
+" Keybinds
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+nnoremap <n> nzzzv
+nnoremap <N> Nzzzv
+
+" NERDTree
+nmap <Leader>e :NERDTreeFocus<CR>
+let g:NERDTreeMapActivateNode="l"
+let g:NERDTreeMapCloseDir="h"
+
+" Tab navigation keymaps
+nmap ]b gt
+nmap [b gT
+
+" Window navigation keymaps
+nmap <Leader>v :vsplit<CR>
+nmap <Leader>h :split<CR>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-q> :q<CR>
+
+" Other Windows
+nmap <Leader>s <Action>(FileStructurePopup)
+nmap <Leader>ff <Action>(SearchEverywhere)
+nmap <Leader>wg <Action>(ActivateVersionControlToolWindow)
+nmap <Leader>wc <Action>(ActivateCommitToolWindow)
+nmap <Leader>al :actionlist<space>
+
+" Code navigation keymaps
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+nmap gd <Action>(GotoDeclaration)
+nmap gu <Action>(FindUsages)
+nmap gl <Action>(ShowErrorDescription)
+
+" Perform actions in code
+nmap <Leader>ca <Action>(ShowIntentionActions)
+nmap <Leader>cr <Action>(RenameElement)
+nmap <Leader>cf <Action>(ReformatCode)
+nmap <Leader>cg <Action>(Generate)
+vmap <Leader>cv <Action>(IntroduceVariable)
+vmap <Leader>cm <Action>(ExtractMethod)
+nmap <Leader>cs <Action>(ChangeSignature)
+
+" Git
+nmap <leader>gg <action>(Git.Menu)
+
+" Debug
+nmap <Leader>db <Action>(ToggleLineBreakpoint)
+nmap <Leader>de <Action>(EditBreakpoint)
+
+
+" Save current file with C-s
+nmap <C-s> :w<CR>
+
+" Selects all editor content
+nnoremap <C-A> gg<S-v>G
+
+
+" Reload .ideavimrc without restarting the IDE
+nmap <Leader>ir <Action>(IdeaVim.ReloadVimRc.reload)

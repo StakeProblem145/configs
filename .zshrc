@@ -139,7 +139,7 @@ function nvims() {
 }
 
 # Intellij
-alias toolbox=".local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
+alias toolbox="~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
 
 
 # Git for config files https://www.atlassian.com/git/tutorials/dotfiles

@@ -116,18 +116,26 @@ esac
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# App local bin to path
+export PATH="/home/hyperion/.local/bin:$PATH"
+
+alias nvim="nvim.appimage"
+
 # Go thing
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 # nvim switcher https://gist.github.com/elijahmanor/b279553c0132bfad7eae23e34ceb593b
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
-alias nvim-kick="NVIM_APPNAME=kickstart nvim"
-alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
-alias nvim-lunar="lvim"
+alias nvim-astro="NVIM_APPNAME=AstroVim nvim"
 
 function nvims() {
-  items=("default" "LazyVim" "AstroNvim" "LunarVim")
+  items=("default" "LazyVim" "AstroVim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -144,3 +152,8 @@ alias toolbox="~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
 
 # Git for config files https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/home/hyperion/.config-repo/ --work-tree=/home/hyperion'
+
+# Scale WSLg?
+export GDK_SCALE=1
+export GDK_DPI_SCALE=1.25
+

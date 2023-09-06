@@ -85,6 +85,8 @@ nmap <Leader>rs <Action>(RunDebug)
 
 " Git
 nmap <leader>gg <action>(Git.Menu)
+nmap <leader>gu <action>(Vcs.UpdateProject)
+nmap <leader>gc <action>(CheckinProject)
 
 " Debug
 nmap <Leader>db <Action>(ToggleLineBreakpoint)

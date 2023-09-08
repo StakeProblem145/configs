@@ -109,9 +109,9 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Start tmux as a basline
-case $- in *i*)
-    [ -z "$TMUX" ] && exec tmux
-esac
+# case $- in *i*)
+#    [ -z "$TMUX" ] && exec tmux
+# esac
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -157,3 +157,8 @@ alias config='/usr/bin/git --git-dir=/home/hyperion/.config-repo/ --work-tree=/h
 export GDK_SCALE=1
 export GDK_DPI_SCALE=1.25
 
+# direnv https://direnv.net/
+eval "$(direnv hook zsh)"
+
+# Alias for configs
+alias zshconfig='nvim ~/.zshrc'

@@ -157,8 +157,13 @@ alias config='/usr/bin/git --git-dir=/home/hyperion/.config-repo/ --work-tree=/h
 export GDK_SCALE=1
 export GDK_DPI_SCALE=1.25
 
+xrdb -load ~/.Xresources
+
 # direnv https://direnv.net/
 eval "$(direnv hook zsh)"
 
 # Alias for configs
 alias zshconfig='nvim ~/.zshrc'
+
+# Alias for podman
+# alias podman='podman-remote-static-linux_amd64'
